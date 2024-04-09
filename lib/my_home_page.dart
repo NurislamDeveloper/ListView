@@ -23,7 +23,7 @@ class _MyHomePageState extends State<MyHomePage> {
       "assets/food10.jpg",
       "assets/food10.jpg",
     ];
-    
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -38,21 +38,31 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             width: 410,
             height: 250,
-            
             child: InkWell(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const MenuePages()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MenuePages(),
+                  ),
+                );
               },
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: imagess.length,
                 itemBuilder: (context, index) {
                   return Padding(
-                    padding: const EdgeInsets.all(15.0),
+                    padding: const EdgeInsets.all(
+                      15.0,
+                    ),
                     child: ClipRRect(
-                        borderRadius: BorderRadius.circular(16),
-                        child: Image.asset(imagess[index])),
+                      borderRadius: BorderRadius.circular(
+                        16,
+                      ),
+                      child: Image.asset(
+                        imagess[index],
+                      ),
+                    ),
                   );
                 },
               ),
